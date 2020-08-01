@@ -60,7 +60,7 @@ function FloorItem({available}) {
     return (
         <span style={{whiteSpace: "pre-wrap" , wordWrap: 'break-word'}}>
         <MeetingRoomOutlinedIcon className={state} data-tip={available}  />
-        {/* <ReactTooltip /> */}
+        <ReactTooltip />
         </span>
     )
 }

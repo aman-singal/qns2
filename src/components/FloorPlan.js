@@ -116,7 +116,7 @@ function FloorPlan({data}) {
    
         <div className={classes.root}>
         <Grid container spacing={3}>
-        <Grid item xs={3}>
+        <Grid item lg={3} xs={7} md={3}>
         <Paper className={classes.paper}>
             <FormControl component="fieldset" className={classes.formControl}>
                 <FormLabel component="legend" className={classes.filterHeading}>Unity Type</FormLabel>
@@ -133,7 +133,7 @@ function FloorPlan({data}) {
             </FormControl>
         </Paper>
         </Grid>
-        <Grid item xs={7}>
+        <Grid item lg={7} xs={12} md={9}>
           <Paper className={classes.paper} style={{overflowX: 'scroll' , overFlowY: 'scroll'}}>
           {info.map((item,Index) =>{
                 
