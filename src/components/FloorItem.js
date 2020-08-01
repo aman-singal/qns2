@@ -1,5 +1,5 @@
 import React , {useState , useEffect} from 'react'
-import MeetingRoomIcon from '@material-ui/icons/MeetingRoom';
+import MeetingRoomOutlinedIcon from '@material-ui/icons/MeetingRoomOutlined';
 import { makeStyles } from '@material-ui/core/styles';
 import ReactTooltip from "react-tooltip";
 
@@ -7,16 +7,32 @@ const useStyles = makeStyles(() => ({
     
     available:{
         color: 'green',
-        fontSize: '3rem'
+        fontSize: '2rem',
+        border: '2px solid green',
+        marginLeft: '10px',
+        '&:hover':{
+            backgroundColor: 'green',
+            color: 'white',
+        }
         
     },
     notAvailable:{
         color: 'grey',
-        fontSize: '3rem'
+        fontSize: '2rem',
+        border: '2px solid grey',
+        marginLeft: '10px',
+        
+        
     },
     sold:{
         color: 'red',
-        fontSize: '3rem'
+        fontSize: '2rem',
+        border: '2px solid red',
+        marginLeft: '10px',
+        '&:hover':{
+            backgroundColor: 'red',
+            color: 'white',
+        }
     }
     })
 )
@@ -42,10 +58,10 @@ function FloorItem({available}) {
     }, [])
     
     return (
-        <>
-        <MeetingRoomIcon className={state} data-tip={available}  />
-        <ReactTooltip />
-        </>
+        <span style={{whiteSpace: "pre-wrap" , wordWrap: 'break-word'}}>
+        <MeetingRoomOutlinedIcon className={state} data-tip={available}  />
+        {/* <ReactTooltip /> */}
+        </span>
     )
 }
 

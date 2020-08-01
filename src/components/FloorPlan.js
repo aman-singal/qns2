@@ -13,20 +13,32 @@ import Grid from '@material-ui/core/Grid';
 
 
 const useStyles = makeStyles((theme) => ({
-    root: {
-      display: 'flex',
-    },
     formControl: {
       margin: theme.spacing(3),
+      marginLeft: '10px'
     },
-    main: {
+    root: {
         flexGrow: 1,
+        
       },
       paper: {
         padding: theme.spacing(2),
-        textAlign: 'center',
         color: theme.palette.text.secondary,
       },
+      filterHeading:{
+          fontWeight: 'bold',
+          marginBottom: '30px'
+      },
+      floorNumber:{
+          backgroundColor: '#ebebeb',
+          border: '1px solid #d3d3d3',
+          padding: '3px',
+          marginBottom: '10px',
+          fontSize: '14px',
+          position: 'relative',
+          top: '-10px',
+          borderRadius: '5px',
+      }
   }));
 
 function FloorPlan({data}) {
@@ -82,9 +94,6 @@ function FloorPlan({data}) {
         }
     }
 
-
-    
-    
     const classes = useStyles();
     const [info, dispatch] = useReducer(reducer, data)
 
@@ -103,20 +112,34 @@ function FloorPlan({data}) {
         }
       };
 
-
-    
-
     return (
-        <>
-        <div className={classes.main}>
+   
+        <div className={classes.root}>
         <Grid container spacing={3}>
-        <Grid item xs={6}>
-          <Paper className={classes.paper}>
+        <Grid item xs={3}>
+        <Paper className={classes.paper}>
+            <FormControl component="fieldset" className={classes.formControl}>
+                <FormLabel component="legend" className={classes.filterHeading}>Unity Type</FormLabel>
+                <FormGroup>
+                <FormControlLabel
+                    control={<Checkbox color="primary" checked={BHK2} onChange={handleChange} name="BHK2" />}
+                    label="2 BHK"
+                />
+                <FormControlLabel
+                    control={<Checkbox color="primary" checked={BHK3} onChange={handleChange} name="BHK3" />}
+                    label="3 BHK"
+                />
+                </FormGroup>
+            </FormControl>
+        </Paper>
+        </Grid>
+        <Grid item xs={7}>
+          <Paper className={classes.paper} style={{overflowX: 'scroll' , overFlowY: 'scroll'}}>
           {info.map((item,Index) =>{
                 
                 return(
-                    <div key={Index}>
-                        <p style={{justifyContent: 'center'}}> Floor Number - {item.floor}</p> 
+                    <div key={Index} style={{width: 'max-content'}}>
+                        <span className={classes.floorNumber}>  Floor - {item.floor}</span> 
                           {item.data.map((OneItem, Index) =>{
                               return(
                                   <FloorItem key={shortid.generate()} available={ OneItem.master === false ?  'notAvailable' : OneItem.status} />
@@ -128,26 +151,9 @@ function FloorPlan({data}) {
           })}
           </Paper>
         </Grid>
-        </Grid>
-        <Grid item xs={4}>
-        <Paper className={classes.paper}>
-            <FormControl component="fieldset" className={classes.formControl}>
-                <FormLabel component="legend">Select The Filter</FormLabel>
-                <FormGroup>
-                <FormControlLabel
-                    control={<Checkbox checked={BHK2} onChange={handleChange} name="BHK2" />}
-                    label="2 BHK"
-                />
-                <FormControlLabel
-                    control={<Checkbox checked={BHK3} onChange={handleChange} name="BHK3" />}
-                    label="3 BHK"
-                />
-                </FormGroup>
-            </FormControl>
-        </Paper>
+        
         </Grid>
         </div>
-    </>    
     )
 }
 

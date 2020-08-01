@@ -43,13 +43,139 @@ function Floor() {
                 type: '3bhk',
                 status: 'available',
                 master: true
+            },
+            {
+                type: '3bhk',
+                status: 'available',
+                master: true
+            },
+            {
+                type: '3bhk',
+                status: 'available',
+                master: true
+            },
+            {
+                type: '3bhk',
+                status: 'available',
+                master: true
+            },
+            {
+                type: '3bhk',
+                status: 'available',
+                master: true
+            },
+            {
+                type: '3bhk',
+                status: 'available',
+                master: true
+            },
+            {
+                type: '3bhk',
+                status: 'available',
+                master: true
+            },
+            {
+                type: '3bhk',
+                status: 'available',
+                master: true
+            },
+            {
+                type: '3bhk',
+                status: 'available',
+                master: true
+            },
+            {
+                type: '3bhk',
+                status: 'available',
+                master: true
+            },
+            {
+                type: '3bhk',
+                status: 'available',
+                master: true
+            },
+            {
+                type: '3bhk',
+                status: 'available',
+                master: true
             }]
+            
     },
     {
         floor: 12,
         data: [{
             type: '2bhk',
             status: 'available',
+            master: true
+        },
+        {
+            type: '2bhk',
+            status: 'available',
+            master: true
+        },
+        {
+            type: '3bhk',
+            status: 'sold',
+            master: true
+        },
+        {
+            type: '2bhk',
+            status: 'available',
+            master: true
+        },
+        {
+            type: '3bhk',
+            status: 'sold',
+            master: true
+        },
+        {
+            type: '2bhk',
+            status: 'available',
+            master: true
+        },
+        {
+            type: '3bhk',
+            status: 'sold',
+            master: true
+        },
+        {
+            type: '2bhk',
+            status: 'available',
+            master: true
+        },
+        {
+            type: '3bhk',
+            status: 'sold',
+            master: true
+        },
+        {
+            type: '2bhk',
+            status: 'available',
+            master: true
+        },
+        {
+            type: '3bhk',
+            status: 'sold',
+            master: true
+        },
+        {
+            type: '2bhk',
+            status: 'available',
+            master: true
+        },
+        {
+            type: '3bhk',
+            status: 'sold',
+            master: true
+        },
+        {
+            type: '2bhk',
+            status: 'available',
+            master: true
+        },
+        {
+            type: '3bhk',
+            status: 'sold',
             master: true
         },
         {

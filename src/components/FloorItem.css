@@ -1,0 +1,21 @@
+.available {
+    color: 'green';
+    font-size: '2rem';
+    border: '2px solid green';
+    margin-left: '10px';
+
+}
+.notAvailable{
+    color: 'grey';
+    font-size: '2rem';
+    border: '2px solid grey';
+    margin-left: '10px';
+}
+sold:{
+    color: 'red';
+    font-size: '2rem';
+    border: '2px solid red';
+    margin-left: '10px';
+}
+
+}
