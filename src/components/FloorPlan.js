@@ -19,11 +19,15 @@ const useStyles = makeStyles((theme) => ({
     },
     root: {
         flexGrow: 1,
-        
+        // backgroundColor: '#f7f7f7'
       },
       paper: {
         padding: theme.spacing(2),
         color: theme.palette.text.secondary,
+        paddingLeft: '30px',
+        borderRadius: '20px',
+        marginLeft: '20px',
+        marginTop: '50px'
       },
       filterHeading:{
           fontWeight: 'bold',
