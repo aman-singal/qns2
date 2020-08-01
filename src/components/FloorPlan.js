@@ -27,7 +27,8 @@ const useStyles = makeStyles((theme) => ({
         paddingLeft: '30px',
         borderRadius: '20px',
         marginLeft: '20px',
-        marginTop: '50px'
+        marginTop: '50px',
+        boxShadow: '1px 3px 1px #9E9E9E'
       },
       filterHeading:{
           fontWeight: 'bold',
